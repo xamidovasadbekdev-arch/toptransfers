@@ -59,6 +59,7 @@ python manage.py runserver
 
 ## 📁 Project Structure
 
+```
 toptransfers/
 ├── config/         # Project settings
 ├── main/           # Main app (clubs, players, transfers)
@@ -67,6 +68,9 @@ toptransfers/
 ├── static/         # CSS, JS, images
 ├── media/          # Uploaded files
 └── requirements.txt
+```
+
+---
 
 ## 👨‍💻 Developer
 
