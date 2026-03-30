@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="nav">
+    <h2>– TRANSFER RECORDS –</h2>
+</div>
+<div class="latest-transfers">
+    <table class="top-players" style="width:100%; border-collapse:collapse;">
+        <thead>
+            <tr style="border-bottom: 2px solid #ff0066;">
+                <td>#</td>
+                <td>Player</td>
+                <td>From</td>
+                <td>To</td>
+                <td>Season</td>
+                <td>Transfer fee, mill. euro</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transfer in top_transfers %}
+            <tr style="border-bottom: 1px solid #333;">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ transfer.player }}</td>
+                <td>{{ transfer.club_from }}</td>
+                <td>{{ transfer.club_to }}</td>
+                <td>{{ transfer.season }}</td>
+                <td>{{ transfer.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

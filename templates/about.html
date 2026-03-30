@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="nav">
+    <h2>– ABOUT US –</h2>
+    <table class="content-nav"></table>
+</div>
+<div class="content" style="margin-bottom: 30px !important; text-align: center">
+    <div class="about-me">
+        <p>
+            The 'TopFootballTransfers' website is engaged in predicting the
+            transfer value of football players.
+        </p>
+
+        <p>
+            Here, 'transfer value' of a football player means the amount of
+            compensation for breaking an ongoing employment contract with the
+            player. Club 'A' breaks the existing contract with a player, and
+            Club 'B' pays the compensation. After that, Club 'B' signs a new
+            contract with the player. Why do clubs pay large sums of money for
+            players? Because they want this player to play for them and do not
+            want to wait until the end of his current contract. Big clubs sign
+            more powerful players, while other clubs earn by searching for and
+            developing the skills of new talent.
+        </p>
+
+        <p>
+            <b>How to assess a footballer's transfer value?</b>
+        </p>
+
+        <p>
+            <b>Skills and mastery of the player.</b> A player with better
+            skills costs more.
+        </p>
+
+        <p>
+            <b>The player's age.</b> The younger the player, the higher the
+            transfer value. A club pays compensation for a football player to
+            sign a new contract and spreads transfer expenses over the new
+            contract's duration. The shorter the possible term of a new
+            contract, the less compensation clubs are willing to pay. Young
+            players can also renew their contracts and stay at a club longer.
+            Older players are often not on the market, making it harder to
+            recover transfer expenses. Younger players have greater potential
+            for growth in skill and physical condition, while older players are
+            more prone to injury and recurring health issues.
+        </p>
+
+        <p>
+            <b>Contract term.</b> The expiry date of the current contract also
+            affects transfer value. If the contract expires before the next
+            transfer window, there is essentially no transfer value — there is
+            no reason to pay for a player who can be signed as a free agent in
+            the next window. If only one transfer window remains before
+            expiry (especially a winter window), the transfer value will be
+            low. The more time remaining on the contract, the higher the
+            transfer value.
+        </p>
+
+        <p>
+            Other factors can also affect transfer value. For example, transfers
+            from clubs in the top five championships (Spain, England, Italy,
+            Germany, France) are usually higher than transfers from other
+            leagues. Transfers of players from non-European championships
+            (except Brazil and Argentina) are often worth very little. Portuguese
+            and Dutch clubs, for instance, frequently sign free players from
+            non-European or Eastern European leagues and sell them on to bigger
+            clubs. The largest transfers typically occur between top clubs.
+        </p>
+
+        <p>
+            Another factor is the positive or negative media profile of a player.
+            A footballer who avoids incidents (especially criminal or sexual) is
+            more in demand. Players with a negative media profile tend to have a
+            lower transfer value. Influential agents (such as Raiola and Mendes)
+            can also push clubs to spend more. No club wants to fall out with an
+            agent who represents many talented players they may need in the future.
+        </p>
+
+        <p>
+            Is there a mathematical formula for calculating a player's transfer
+            value? No. Predictions are based on the factors listed above,
+            analysis of past transfers, and monitoring trends in the rising
+            transfer market. Note that the transfer values shown here do not
+            account for the Chinese factor. After analyzing transfers involving
+            Chinese clubs, we could not find consistent correlations with the
+            usual influencing factors. Very few players want to play in China,
+            so Chinese clubs are forced to overpay.
+        </p>
+
+        <p>
+            To comply with Financial Fair Play rules, some clubs resort to
+            workarounds — first taking a player on loan, then buying him out at
+            the end of the loan period. The loan agreement, transfer agreement,
+            and employment contract are concluded simultaneously. Therefore,
+            when calculating transfer costs, we add the loan fee to the transfer
+            fee if the player was previously on loan from the selling club.
+        </p>
+
+        <p>
+            In some cases, clubs arrange future transfers — contracts stating
+            that a player will move to another club at a set future date. In
+            these cases, we register the transfer in the "Latest Transfers"
+            section and move the player to the new club's list immediately,
+            even if he is still playing for his previous club. Players are
+            listed under the club that owns their contract, regardless of where
+            they are currently competing.
+        </p>
+
+        <p>
+            It should be noted that our website only covers top transfers —
+            those amounting to more than 20 million euros. This is because the
+            majority of football fans are interested in major transfers and
+            famous names. Also, focusing on a limited number of players allows
+            our team to monitor and update information more promptly and
+            accurately.
+        </p>
+
+        <p>
+            <b>What is TopFootballTransfers.com for?</b> To give fans clearer
+            information about player transfer costs. Many sites specialize in
+            determining player market value, but the figures shown often diverge
+            greatly from the actual transfer amounts. This is because a
+            footballer is not a commodity — there is no fixed market value.
+            There is only the transfer value: the compensation amount for
+            breaking a contract. Mathematical formulas alone cannot show the
+            full picture, because many factors beyond a player's skill level
+            influence the final figure. We rely heavily on consultations with
+            football agents, as they are professionally involved in transfers.
+            Our approach allows us to
+            <a href="{% url 'top150'%}">
+                accurately predict the transfer value of players.
+            </a>
+        </p>
+    </div>
+</div>
+{% endblock %}

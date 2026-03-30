@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="content">
+    <div class="stats">
+        <div>
+            <a href="{% url 'top150' %}"> TOP-150 accurate predictions</a>
+        </div>
+        <div>
+            <a href="{% url 'transfer_records' %}">Transfers records</a>
+        </div>
+        <div>
+            <a href="{% url 'expenditure' %}"> TOP-50 clubs by expenditure in 2022-23 </a>
+        </div>
+        <div>
+            <a href="{% url 'income' %}"> TOP-50 clubs by income in 2022-23 </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

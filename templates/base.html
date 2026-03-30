@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="World Top transfers"/>
+
+    <meta
+            name="keywords"
+            content="football,clubs, football club,Real Madrid, football transfer, top transfers,"
+    />
+    <meta name="author" content="Ali Egamberdiyev"/>
+    <title>Top transfer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}"/>
+    <link rel="icon" href="{% static '/img/12252568_173-removebg-preview.png' %}"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <div class="country-menu-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="navbar-menu-btn">
+            <div class="line4"></div>
+            <div class="line5"></div>
+            <div class="line6"></div>
+        </div>
+        <div class="navbar-menu">
+            <h3><a href="{% url 'clubs' %}">CLUBS</a></h3>
+            <h3><a href="{% url 'latest-transfers' %}">LATEST TRANSFERS</a></h3>
+            <h3><a href="{% url 'players' %}">PLAYERS</a></h3>
+            <h3><a href="{% url 'u20-players' %}">U-20 PLAYERS</a></h3>
+            <h3><a href="{% url 'tryouts' %}">TRYOUTS</a></h3>
+            <h3><a href="{% url 'stats' %}">STATS</a></h3>
+            <h3><a href="{% url 'about' %}">ABOUT US</a></h3>
+        </div>
+        <div class="icon">
+            <a href="{% url 'index' %}">
+                <img src="{% static 'img/12252568_173-removebg-preview.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="links">
+            <div><a href="{% url 'clubs' %}">CLUBS</a></div>
+            <div><a href="{% url 'latest-transfers' %}">LATEST TRANSFERS</a></div>
+            <div><a href="{% url 'players' %}">PLAYERS</a></div>
+            <div><a href="{% url 'u20-players' %}">U-20 PLAYERS</a></div>
+            <div><a href="{% url 'tryouts' %}">TRYOUTS</a></div>
+            <div><a href="{% url 'stats' %}">STATS</a></div>
+            <div><a href="{% url 'about' %}">ABOUT US</a></div>
+        </div>
+    </div>
+    <div class="country-clubs">
+        <h2 id="title">Clubs by country</h2>
+        <div class="country">
+            <div>
+                {% for country in countries %}
+                {% if forloop.counter <= 6 %}
+                <h3><a href="{% url 'clubs_by_country' country.id %}">{{ country.name }}</a></h3>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div>
+                {% for country in countries %}
+                {% if forloop.counter > 6 %}
+                <h3><a href="{% url 'clubs_by_country' country.id %}">{{ country.name }}</a></h3>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% block content%}
+
+    {% endblock %}
+    <div class="footer" style="margin-top: 200px;">
+        <a href="https://t.me/homiidov">
+            <div>
+                <i class="fa-brands fa-telegram"></i> &nbsp;
+                <h3>Telegram</h3>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/homiidov_/">
+            <div>
+                <i class="fa-brands fa-instagram"></i> &nbsp;
+                <h3>Instagram</h3>
+            </div>
+        </a>
+    </div>
+</div>
+</body>
+<script src="{% static 'js/main.js' %}"></script>
+</html>
+

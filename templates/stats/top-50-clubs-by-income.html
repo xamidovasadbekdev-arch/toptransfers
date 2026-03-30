@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="nav">
+    <h2>– TOP-50 CLUBS BY INCOME IN 2022-23 –</h2>
+</div>
+<div class="latest-transfers">
+    <table class="top-players" style="width:100%; border-collapse:collapse;">
+        <thead>
+            <tr style="border-bottom: 1px solid #444;">
+                <td>#</td>
+                <td>Club</td>
+                <td>Country</td>
+                <td>Total income, mill. euro</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for club in clubs %}
+            <tr style="border-bottom: 1px solid #444;">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ club.name }}</td>
+                <td>{{ club.country }}</td>
+                <td>{{ club.total_income|floatformat:2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

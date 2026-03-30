@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+#six-col thead tr td {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-top: 2px solid var(--red);
+    border-bottom: 2px solid var(--red);
+}
+</style>
+
+<div class="nav">
+    <h2>– LATEST TRANSFERS –</h2>
+</div>
+<div class="latest-transfers">
+    <table class="players" id="six-col">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Player</td>
+                <td>From</td>
+                <td>To</td>
+                <td>Transfer fee, mill. euro</td>
+                <td>Transfer fee, mill. euro, by tft.com</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transfer in transfers %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ transfer.player.name }}</td>
+                <td>{{ transfer.club_from }}</td>
+                <td>{{ transfer.club_to }}</td>
+                <td>{{ transfer.price }}</td>
+                <td>{{ transfer.tft_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta sequi quia eos cupiditate rerum accusantium
+        odit enim, expedita, architecto error dignissimos voluptatibus. Nisi illo, maiores fugit amet neque eveniet!</p>
+</div>
+{% endblock %}

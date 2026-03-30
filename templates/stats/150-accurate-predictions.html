@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="nav">
+    <h2>– TOP-150 ACCURATE PREDICTIONS –</h2>
+</div>
+<div class="latest-transfers">
+    <table class="top-players" style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr style="border-bottom: 2px solid #ff0066;">
+                <td>#</td>
+                <td>Player</td>
+                <td>From</td>
+                <td>To</td>
+                <td>Transfer fee, mill. euro</td>
+                <td>Transfer fee, mill. euro, by tft.com</td>
+                <td>Divergence, %</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in acc_pred_players %}
+            {% with transfer=player.transfers.last %}
+            <tr style="border-bottom: 1px solid #333;">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ player.name }}</td>
+                <td>{{ transfer.club_from }}</td>
+                <td>{{ transfer.club_to }}</td>
+                <td>{{ transfer.price }}</td>
+                <td>{{ transfer.tft_price }}</td>
+                <td>0</td>
+            </tr>
+            {% endwith %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
